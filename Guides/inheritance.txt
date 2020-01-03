@@ -1,0 +1,46 @@
+/**
+Inheritance is the act of a class passing down traits to a subclass.
+Fields and methods that are public/protected are passed down. Private fields and methods are not passed down to subclasses!
+Inheritance in java is done by the "extend" keyword when writing the name of the class that is doing the extending.
+
+Example:
+*/
+
+class Dog extends Animal{}
+class Cat extends Animal{}
+
+/**
+This allows for something known as "polymorphism".
+This allows for a single class variable, or interface (later), to use different types of reference classes.
+Example:
+*/
+
+Animal firstAnimal = new Dog();
+Animal secondAnimal = new Cat();
+
+/**
+Interfaces are the next step in defining how a class MUST work. Interfaces contain method names that, when a class implements the interface, must be implemented. Interfaces can also contain final variables.
+Example:
+*/
+
+interface Shape{
+	double area();
+}
+
+class Rectangle extends Shape{			//This class throws an error saying something along the lines of "class Rectangle must implement method 'area()' from interface Shape
+}
+
+class Rectangle extends Shape{
+	public double area(){
+		return length*height;
+	}
+}
+
+
+The advantage of using an interface is you can write a method that looks like this:
+
+public static void printArea(Shape s){
+	System.out.println(s.area());
+}
+
+Even if we don't know whether the shape is a rectangle, triangle, circle, etc., we know that it has an area so we can make methods built off of that. This would be useful for a drawing board program or something similar where this common functionality of all shapes would help you create a method called "draw shape" or something similar.

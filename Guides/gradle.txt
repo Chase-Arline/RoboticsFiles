@@ -1,0 +1,15 @@
+Gradle is a program-building service that is popular because it allows people to develop multiple build/test scenarios and it also automatically fetches dependencies (libraries your program needs to run)
+
+The easiest way for us to add FRC-related libraries through gradle is to use VSCode with the WPILib plugin.
+In VSCode, the WPILib plugin allows us to run a command called "Manage vendor libraries". Using this, we can either find ones that are online or retrieve ones where the dependency file has been put.
+For FRC-Related vendor libraries, most companies will provide us with a *.json file. This file contains the online location of the library. After adding it to the correct directory (/Users/Public/FRC2020/vendordeps), we only neeed to then run the WPILib plugin and add "offline libraries". This will recognize the newly applied *.json file and automatically fetch the libraries for us. 
+
+Gradle also is used to build/deploy the robot project.
+
+While in the main directory of the project, there is a file called "gradlew". This is the gradle wrapper used for these build cases. 
+
+To build the project, use a terminal (the one in VSCode or a separate one that is in the directory) and run "./gradlew build"
+To deploy it, do the same but run "./gradlew deploy"
+
+The first time running a gradle process is slow because it needs to start the entire gradle daemon (a process that normally starts up in the background and gets called on later to run tasks). 
+After the first time, it should be pretty quick to build the project and deploy.

@@ -1,5 +1,5 @@
 
-/**
+
 DRIVETRAIN INHERITANCE EXAMPLE
 
 public class Drivetrain extends ReplayableSubsystem{
@@ -16,10 +16,7 @@ public class Drivetrain extends ReplayableSubsystem{
 	}
 }
 
-*/
 
-
-/**
 LIFT INHERITANCE EXAMPLE
 
 public class Lift extends ReplayableSubsystem{
@@ -36,9 +33,6 @@ public class Lift extends ReplayableSubsystem{
 	}
 
 }
-
-*/
-
 
 // COMMAND USAGE EXAMPLE / SETTING UP OF BUTTONS
 

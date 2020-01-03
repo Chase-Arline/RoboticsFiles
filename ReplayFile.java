@@ -31,7 +31,8 @@ public class ReplayFile extends File {
 		wr.newLine();
 		wr.flush();
 	}	
-	//Removes a piece of the file, determined by the two percents given. i.e. if 20 and 50 are given, files lines not written inside of the 20-50% range of the file will be removed. 
+	
+	//Removes a piece of the file, determined by the two percents given. i.e. if 20 and 50 are given, only lines within the 20-50% range of the file will be kept.
 	//This can be useful for editing last parts of a replay that may have deadstops (the user stopped moving the robot before ending recording)
 	public void editFile(int prePercent, int postPercent) throws IOException{
 		Scanner newScan = new Scanner(this);			
@@ -51,7 +52,7 @@ public class ReplayFile extends File {
 		fw.flush();
 		fw.close();
 	}	
-
+	
 	public void close() throws IOException {
 		wr.flush();
 		wr.close();
